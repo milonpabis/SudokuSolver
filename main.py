@@ -1,4 +1,6 @@
 from SudokuSolver import SudokuSolver
+from PySide6.QtWidgets import QApplication
+from UIModel import AppWindow
 
 
 TEMP_BOARD = [
@@ -17,6 +19,8 @@ TEMP_BOARD = [
 
 
 if __name__ == "__main__":
-    sudoku = SudokuSolver(TEMP_BOARD)
-    sudoku.solve()
-    sudoku.print_board()
+
+    app = QApplication()
+    window = AppWindow()
+    window.show()
+    app.exec()
