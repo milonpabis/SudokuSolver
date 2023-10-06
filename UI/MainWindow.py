@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
-    QLabel, QLineEdit, QMainWindow, QPushButton,
-    QSizePolicy, QVBoxLayout, QWidget)
+    QLabel, QLayout, QLineEdit, QMainWindow,
+    QPushButton, QSizePolicy, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -36,8 +36,10 @@ class Ui_MainWindow(object):
         self.frame.setMaximumSize(QSize(16777215, 100))
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout = QHBoxLayout(self.frame)
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.verticalLayout_3 = QVBoxLayout(self.frame)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalLayout_3.setSizeConstraint(QLayout.SetDefaultConstraint)
+        self.verticalLayout_3.setContentsMargins(0, -1, 0, -1)
         self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
         font = QFont()
@@ -47,7 +49,29 @@ class Ui_MainWindow(object):
         self.label.setFont(font)
         self.label.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout.addWidget(self.label)
+        self.verticalLayout_3.addWidget(self.label)
+
+        self.frame_16 = QFrame(self.frame)
+        self.frame_16.setObjectName(u"frame_16")
+        self.frame_16.setFrameShape(QFrame.StyledPanel)
+        self.frame_16.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_4 = QVBoxLayout(self.frame_16)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.verticalLayout_4.setContentsMargins(250, 0, -1, 0)
+        self.bt_clear = QPushButton(self.frame_16)
+        self.bt_clear.setObjectName(u"bt_clear")
+        self.bt_clear.setMinimumSize(QSize(100, 0))
+        self.bt_clear.setMaximumSize(QSize(100, 16777215))
+        font1 = QFont()
+        font1.setPointSize(11)
+        font1.setBold(True)
+        font1.setItalic(True)
+        self.bt_clear.setFont(font1)
+
+        self.verticalLayout_4.addWidget(self.bt_clear)
+
+
+        self.verticalLayout_3.addWidget(self.frame_16)
 
 
         self.verticalLayout.addWidget(self.frame)
@@ -83,10 +107,10 @@ class Ui_MainWindow(object):
         self.l1.setObjectName(u"l1")
         self.l1.setMinimumSize(QSize(41, 41))
         self.l1.setMaximumSize(QSize(41, 41))
-        font1 = QFont()
-        font1.setPointSize(18)
-        font1.setBold(True)
-        self.l1.setFont(font1)
+        font2 = QFont()
+        font2.setPointSize(18)
+        font2.setBold(True)
+        self.l1.setFont(font2)
         self.l1.setMaxLength(1)
         self.l1.setAlignment(Qt.AlignCenter)
 
@@ -96,7 +120,7 @@ class Ui_MainWindow(object):
         self.l2.setObjectName(u"l2")
         self.l2.setMinimumSize(QSize(41, 41))
         self.l2.setMaximumSize(QSize(41, 41))
-        self.l2.setFont(font1)
+        self.l2.setFont(font2)
         self.l2.setMaxLength(1)
         self.l2.setAlignment(Qt.AlignCenter)
 
@@ -106,7 +130,7 @@ class Ui_MainWindow(object):
         self.l3.setObjectName(u"l3")
         self.l3.setMinimumSize(QSize(41, 41))
         self.l3.setMaximumSize(QSize(41, 41))
-        self.l3.setFont(font1)
+        self.l3.setFont(font2)
         self.l3.setMaxLength(1)
         self.l3.setAlignment(Qt.AlignCenter)
 
@@ -116,7 +140,7 @@ class Ui_MainWindow(object):
         self.l10.setObjectName(u"l10")
         self.l10.setMinimumSize(QSize(41, 41))
         self.l10.setMaximumSize(QSize(41, 41))
-        self.l10.setFont(font1)
+        self.l10.setFont(font2)
         self.l10.setMaxLength(1)
         self.l10.setAlignment(Qt.AlignCenter)
 
@@ -126,7 +150,7 @@ class Ui_MainWindow(object):
         self.l11.setObjectName(u"l11")
         self.l11.setMinimumSize(QSize(41, 41))
         self.l11.setMaximumSize(QSize(41, 41))
-        self.l11.setFont(font1)
+        self.l11.setFont(font2)
         self.l11.setMaxLength(1)
         self.l11.setAlignment(Qt.AlignCenter)
 
@@ -136,7 +160,7 @@ class Ui_MainWindow(object):
         self.l12.setObjectName(u"l12")
         self.l12.setMinimumSize(QSize(41, 41))
         self.l12.setMaximumSize(QSize(41, 41))
-        self.l12.setFont(font1)
+        self.l12.setFont(font2)
         self.l12.setMaxLength(1)
         self.l12.setAlignment(Qt.AlignCenter)
 
@@ -146,7 +170,7 @@ class Ui_MainWindow(object):
         self.l19.setObjectName(u"l19")
         self.l19.setMinimumSize(QSize(41, 41))
         self.l19.setMaximumSize(QSize(41, 41))
-        self.l19.setFont(font1)
+        self.l19.setFont(font2)
         self.l19.setMaxLength(1)
         self.l19.setAlignment(Qt.AlignCenter)
 
@@ -156,7 +180,7 @@ class Ui_MainWindow(object):
         self.l20.setObjectName(u"l20")
         self.l20.setMinimumSize(QSize(41, 41))
         self.l20.setMaximumSize(QSize(41, 41))
-        self.l20.setFont(font1)
+        self.l20.setFont(font2)
         self.l20.setMaxLength(1)
         self.l20.setAlignment(Qt.AlignCenter)
 
@@ -166,7 +190,7 @@ class Ui_MainWindow(object):
         self.l21.setObjectName(u"l21")
         self.l21.setMinimumSize(QSize(41, 41))
         self.l21.setMaximumSize(QSize(41, 41))
-        self.l21.setFont(font1)
+        self.l21.setFont(font2)
         self.l21.setMaxLength(1)
         self.l21.setAlignment(Qt.AlignCenter)
 
@@ -189,7 +213,7 @@ class Ui_MainWindow(object):
         self.l4.setObjectName(u"l4")
         self.l4.setMinimumSize(QSize(41, 41))
         self.l4.setMaximumSize(QSize(41, 41))
-        self.l4.setFont(font1)
+        self.l4.setFont(font2)
         self.l4.setMaxLength(1)
         self.l4.setAlignment(Qt.AlignCenter)
 
@@ -199,7 +223,7 @@ class Ui_MainWindow(object):
         self.l5.setObjectName(u"l5")
         self.l5.setMinimumSize(QSize(41, 41))
         self.l5.setMaximumSize(QSize(41, 41))
-        self.l5.setFont(font1)
+        self.l5.setFont(font2)
         self.l5.setMaxLength(1)
         self.l5.setAlignment(Qt.AlignCenter)
 
@@ -209,7 +233,7 @@ class Ui_MainWindow(object):
         self.l6.setObjectName(u"l6")
         self.l6.setMinimumSize(QSize(41, 41))
         self.l6.setMaximumSize(QSize(41, 41))
-        self.l6.setFont(font1)
+        self.l6.setFont(font2)
         self.l6.setMaxLength(1)
         self.l6.setAlignment(Qt.AlignCenter)
 
@@ -219,7 +243,7 @@ class Ui_MainWindow(object):
         self.l13.setObjectName(u"l13")
         self.l13.setMinimumSize(QSize(41, 41))
         self.l13.setMaximumSize(QSize(41, 41))
-        self.l13.setFont(font1)
+        self.l13.setFont(font2)
         self.l13.setMaxLength(1)
         self.l13.setAlignment(Qt.AlignCenter)
 
@@ -229,7 +253,7 @@ class Ui_MainWindow(object):
         self.l14.setObjectName(u"l14")
         self.l14.setMinimumSize(QSize(41, 41))
         self.l14.setMaximumSize(QSize(41, 41))
-        self.l14.setFont(font1)
+        self.l14.setFont(font2)
         self.l14.setMaxLength(1)
         self.l14.setAlignment(Qt.AlignCenter)
 
@@ -239,7 +263,7 @@ class Ui_MainWindow(object):
         self.l15.setObjectName(u"l15")
         self.l15.setMinimumSize(QSize(41, 41))
         self.l15.setMaximumSize(QSize(41, 41))
-        self.l15.setFont(font1)
+        self.l15.setFont(font2)
         self.l15.setMaxLength(1)
         self.l15.setAlignment(Qt.AlignCenter)
 
@@ -249,7 +273,7 @@ class Ui_MainWindow(object):
         self.l22.setObjectName(u"l22")
         self.l22.setMinimumSize(QSize(41, 41))
         self.l22.setMaximumSize(QSize(41, 41))
-        self.l22.setFont(font1)
+        self.l22.setFont(font2)
         self.l22.setMaxLength(1)
         self.l22.setAlignment(Qt.AlignCenter)
 
@@ -259,7 +283,7 @@ class Ui_MainWindow(object):
         self.l23.setObjectName(u"l23")
         self.l23.setMinimumSize(QSize(41, 41))
         self.l23.setMaximumSize(QSize(41, 41))
-        self.l23.setFont(font1)
+        self.l23.setFont(font2)
         self.l23.setMaxLength(1)
         self.l23.setAlignment(Qt.AlignCenter)
 
@@ -269,7 +293,7 @@ class Ui_MainWindow(object):
         self.l24.setObjectName(u"l24")
         self.l24.setMinimumSize(QSize(41, 41))
         self.l24.setMaximumSize(QSize(41, 41))
-        self.l24.setFont(font1)
+        self.l24.setFont(font2)
         self.l24.setMaxLength(1)
         self.l24.setAlignment(Qt.AlignCenter)
 
@@ -292,7 +316,7 @@ class Ui_MainWindow(object):
         self.l7.setObjectName(u"l7")
         self.l7.setMinimumSize(QSize(41, 41))
         self.l7.setMaximumSize(QSize(41, 41))
-        self.l7.setFont(font1)
+        self.l7.setFont(font2)
         self.l7.setMaxLength(1)
         self.l7.setAlignment(Qt.AlignCenter)
 
@@ -302,7 +326,7 @@ class Ui_MainWindow(object):
         self.l8.setObjectName(u"l8")
         self.l8.setMinimumSize(QSize(41, 41))
         self.l8.setMaximumSize(QSize(41, 41))
-        self.l8.setFont(font1)
+        self.l8.setFont(font2)
         self.l8.setMaxLength(1)
         self.l8.setAlignment(Qt.AlignCenter)
 
@@ -312,7 +336,7 @@ class Ui_MainWindow(object):
         self.l9.setObjectName(u"l9")
         self.l9.setMinimumSize(QSize(41, 41))
         self.l9.setMaximumSize(QSize(41, 41))
-        self.l9.setFont(font1)
+        self.l9.setFont(font2)
         self.l9.setMaxLength(1)
         self.l9.setAlignment(Qt.AlignCenter)
 
@@ -322,7 +346,7 @@ class Ui_MainWindow(object):
         self.l16.setObjectName(u"l16")
         self.l16.setMinimumSize(QSize(41, 41))
         self.l16.setMaximumSize(QSize(41, 41))
-        self.l16.setFont(font1)
+        self.l16.setFont(font2)
         self.l16.setMaxLength(1)
         self.l16.setAlignment(Qt.AlignCenter)
 
@@ -332,7 +356,7 @@ class Ui_MainWindow(object):
         self.l17.setObjectName(u"l17")
         self.l17.setMinimumSize(QSize(41, 41))
         self.l17.setMaximumSize(QSize(41, 41))
-        self.l17.setFont(font1)
+        self.l17.setFont(font2)
         self.l17.setMaxLength(1)
         self.l17.setAlignment(Qt.AlignCenter)
 
@@ -342,7 +366,7 @@ class Ui_MainWindow(object):
         self.l18.setObjectName(u"l18")
         self.l18.setMinimumSize(QSize(41, 41))
         self.l18.setMaximumSize(QSize(41, 41))
-        self.l18.setFont(font1)
+        self.l18.setFont(font2)
         self.l18.setMaxLength(1)
         self.l18.setAlignment(Qt.AlignCenter)
 
@@ -352,7 +376,7 @@ class Ui_MainWindow(object):
         self.l25.setObjectName(u"l25")
         self.l25.setMinimumSize(QSize(41, 41))
         self.l25.setMaximumSize(QSize(41, 41))
-        self.l25.setFont(font1)
+        self.l25.setFont(font2)
         self.l25.setMaxLength(1)
         self.l25.setAlignment(Qt.AlignCenter)
 
@@ -362,7 +386,7 @@ class Ui_MainWindow(object):
         self.l26.setObjectName(u"l26")
         self.l26.setMinimumSize(QSize(41, 41))
         self.l26.setMaximumSize(QSize(41, 41))
-        self.l26.setFont(font1)
+        self.l26.setFont(font2)
         self.l26.setMaxLength(1)
         self.l26.setAlignment(Qt.AlignCenter)
 
@@ -372,7 +396,7 @@ class Ui_MainWindow(object):
         self.l27.setObjectName(u"l27")
         self.l27.setMinimumSize(QSize(41, 41))
         self.l27.setMaximumSize(QSize(41, 41))
-        self.l27.setFont(font1)
+        self.l27.setFont(font2)
         self.l27.setMaxLength(1)
         self.l27.setAlignment(Qt.AlignCenter)
 
@@ -407,7 +431,7 @@ class Ui_MainWindow(object):
         self.l28.setObjectName(u"l28")
         self.l28.setMinimumSize(QSize(41, 41))
         self.l28.setMaximumSize(QSize(41, 41))
-        self.l28.setFont(font1)
+        self.l28.setFont(font2)
         self.l28.setMaxLength(1)
         self.l28.setAlignment(Qt.AlignCenter)
 
@@ -417,7 +441,7 @@ class Ui_MainWindow(object):
         self.l29.setObjectName(u"l29")
         self.l29.setMinimumSize(QSize(41, 41))
         self.l29.setMaximumSize(QSize(41, 41))
-        self.l29.setFont(font1)
+        self.l29.setFont(font2)
         self.l29.setMaxLength(1)
         self.l29.setAlignment(Qt.AlignCenter)
 
@@ -427,7 +451,7 @@ class Ui_MainWindow(object):
         self.l30.setObjectName(u"l30")
         self.l30.setMinimumSize(QSize(41, 41))
         self.l30.setMaximumSize(QSize(41, 41))
-        self.l30.setFont(font1)
+        self.l30.setFont(font2)
         self.l30.setMaxLength(1)
         self.l30.setAlignment(Qt.AlignCenter)
 
@@ -437,7 +461,7 @@ class Ui_MainWindow(object):
         self.l37.setObjectName(u"l37")
         self.l37.setMinimumSize(QSize(41, 41))
         self.l37.setMaximumSize(QSize(41, 41))
-        self.l37.setFont(font1)
+        self.l37.setFont(font2)
         self.l37.setMaxLength(1)
         self.l37.setAlignment(Qt.AlignCenter)
 
@@ -447,7 +471,7 @@ class Ui_MainWindow(object):
         self.l38.setObjectName(u"l38")
         self.l38.setMinimumSize(QSize(41, 41))
         self.l38.setMaximumSize(QSize(41, 41))
-        self.l38.setFont(font1)
+        self.l38.setFont(font2)
         self.l38.setMaxLength(1)
         self.l38.setAlignment(Qt.AlignCenter)
 
@@ -457,7 +481,7 @@ class Ui_MainWindow(object):
         self.l39.setObjectName(u"l39")
         self.l39.setMinimumSize(QSize(41, 41))
         self.l39.setMaximumSize(QSize(41, 41))
-        self.l39.setFont(font1)
+        self.l39.setFont(font2)
         self.l39.setMaxLength(1)
         self.l39.setAlignment(Qt.AlignCenter)
 
@@ -467,7 +491,7 @@ class Ui_MainWindow(object):
         self.l46.setObjectName(u"l46")
         self.l46.setMinimumSize(QSize(41, 41))
         self.l46.setMaximumSize(QSize(41, 41))
-        self.l46.setFont(font1)
+        self.l46.setFont(font2)
         self.l46.setMaxLength(1)
         self.l46.setAlignment(Qt.AlignCenter)
 
@@ -477,7 +501,7 @@ class Ui_MainWindow(object):
         self.l47.setObjectName(u"l47")
         self.l47.setMinimumSize(QSize(41, 41))
         self.l47.setMaximumSize(QSize(41, 41))
-        self.l47.setFont(font1)
+        self.l47.setFont(font2)
         self.l47.setMaxLength(1)
         self.l47.setAlignment(Qt.AlignCenter)
 
@@ -487,7 +511,7 @@ class Ui_MainWindow(object):
         self.l48.setObjectName(u"l48")
         self.l48.setMinimumSize(QSize(41, 41))
         self.l48.setMaximumSize(QSize(41, 41))
-        self.l48.setFont(font1)
+        self.l48.setFont(font2)
         self.l48.setMaxLength(1)
         self.l48.setAlignment(Qt.AlignCenter)
 
@@ -510,7 +534,7 @@ class Ui_MainWindow(object):
         self.l33.setObjectName(u"l33")
         self.l33.setMinimumSize(QSize(41, 41))
         self.l33.setMaximumSize(QSize(41, 41))
-        self.l33.setFont(font1)
+        self.l33.setFont(font2)
         self.l33.setMaxLength(1)
         self.l33.setAlignment(Qt.AlignCenter)
 
@@ -520,7 +544,7 @@ class Ui_MainWindow(object):
         self.l32.setObjectName(u"l32")
         self.l32.setMinimumSize(QSize(41, 41))
         self.l32.setMaximumSize(QSize(41, 41))
-        self.l32.setFont(font1)
+        self.l32.setFont(font2)
         self.l32.setMaxLength(1)
         self.l32.setAlignment(Qt.AlignCenter)
 
@@ -530,7 +554,7 @@ class Ui_MainWindow(object):
         self.l50.setObjectName(u"l50")
         self.l50.setMinimumSize(QSize(41, 41))
         self.l50.setMaximumSize(QSize(41, 41))
-        self.l50.setFont(font1)
+        self.l50.setFont(font2)
         self.l50.setMaxLength(1)
         self.l50.setAlignment(Qt.AlignCenter)
 
@@ -540,7 +564,7 @@ class Ui_MainWindow(object):
         self.l42.setObjectName(u"l42")
         self.l42.setMinimumSize(QSize(41, 41))
         self.l42.setMaximumSize(QSize(41, 41))
-        self.l42.setFont(font1)
+        self.l42.setFont(font2)
         self.l42.setMaxLength(1)
         self.l42.setAlignment(Qt.AlignCenter)
 
@@ -550,7 +574,7 @@ class Ui_MainWindow(object):
         self.l40.setObjectName(u"l40")
         self.l40.setMinimumSize(QSize(41, 41))
         self.l40.setMaximumSize(QSize(41, 41))
-        self.l40.setFont(font1)
+        self.l40.setFont(font2)
         self.l40.setMaxLength(1)
         self.l40.setAlignment(Qt.AlignCenter)
 
@@ -560,7 +584,7 @@ class Ui_MainWindow(object):
         self.l49.setObjectName(u"l49")
         self.l49.setMinimumSize(QSize(41, 41))
         self.l49.setMaximumSize(QSize(41, 41))
-        self.l49.setFont(font1)
+        self.l49.setFont(font2)
         self.l49.setMaxLength(1)
         self.l49.setAlignment(Qt.AlignCenter)
 
@@ -570,7 +594,7 @@ class Ui_MainWindow(object):
         self.l41.setObjectName(u"l41")
         self.l41.setMinimumSize(QSize(41, 41))
         self.l41.setMaximumSize(QSize(41, 41))
-        self.l41.setFont(font1)
+        self.l41.setFont(font2)
         self.l41.setMaxLength(1)
         self.l41.setAlignment(Qt.AlignCenter)
 
@@ -580,7 +604,7 @@ class Ui_MainWindow(object):
         self.l31.setObjectName(u"l31")
         self.l31.setMinimumSize(QSize(41, 41))
         self.l31.setMaximumSize(QSize(41, 41))
-        self.l31.setFont(font1)
+        self.l31.setFont(font2)
         self.l31.setMaxLength(1)
         self.l31.setAlignment(Qt.AlignCenter)
 
@@ -590,7 +614,7 @@ class Ui_MainWindow(object):
         self.l51.setObjectName(u"l51")
         self.l51.setMinimumSize(QSize(41, 41))
         self.l51.setMaximumSize(QSize(41, 41))
-        self.l51.setFont(font1)
+        self.l51.setFont(font2)
         self.l51.setMaxLength(1)
         self.l51.setAlignment(Qt.AlignCenter)
 
@@ -613,7 +637,7 @@ class Ui_MainWindow(object):
         self.l34.setObjectName(u"l34")
         self.l34.setMinimumSize(QSize(41, 41))
         self.l34.setMaximumSize(QSize(41, 41))
-        self.l34.setFont(font1)
+        self.l34.setFont(font2)
         self.l34.setMaxLength(1)
         self.l34.setAlignment(Qt.AlignCenter)
 
@@ -623,7 +647,7 @@ class Ui_MainWindow(object):
         self.l35.setObjectName(u"l35")
         self.l35.setMinimumSize(QSize(41, 41))
         self.l35.setMaximumSize(QSize(41, 41))
-        self.l35.setFont(font1)
+        self.l35.setFont(font2)
         self.l35.setMaxLength(1)
         self.l35.setAlignment(Qt.AlignCenter)
 
@@ -633,7 +657,7 @@ class Ui_MainWindow(object):
         self.l36.setObjectName(u"l36")
         self.l36.setMinimumSize(QSize(41, 41))
         self.l36.setMaximumSize(QSize(41, 41))
-        self.l36.setFont(font1)
+        self.l36.setFont(font2)
         self.l36.setMaxLength(1)
         self.l36.setAlignment(Qt.AlignCenter)
 
@@ -643,7 +667,7 @@ class Ui_MainWindow(object):
         self.l43.setObjectName(u"l43")
         self.l43.setMinimumSize(QSize(41, 41))
         self.l43.setMaximumSize(QSize(41, 41))
-        self.l43.setFont(font1)
+        self.l43.setFont(font2)
         self.l43.setMaxLength(1)
         self.l43.setAlignment(Qt.AlignCenter)
 
@@ -653,7 +677,7 @@ class Ui_MainWindow(object):
         self.l44.setObjectName(u"l44")
         self.l44.setMinimumSize(QSize(41, 41))
         self.l44.setMaximumSize(QSize(41, 41))
-        self.l44.setFont(font1)
+        self.l44.setFont(font2)
         self.l44.setMaxLength(1)
         self.l44.setAlignment(Qt.AlignCenter)
 
@@ -663,7 +687,7 @@ class Ui_MainWindow(object):
         self.l45.setObjectName(u"l45")
         self.l45.setMinimumSize(QSize(41, 41))
         self.l45.setMaximumSize(QSize(41, 41))
-        self.l45.setFont(font1)
+        self.l45.setFont(font2)
         self.l45.setMaxLength(1)
         self.l45.setAlignment(Qt.AlignCenter)
 
@@ -673,7 +697,7 @@ class Ui_MainWindow(object):
         self.l52.setObjectName(u"l52")
         self.l52.setMinimumSize(QSize(41, 41))
         self.l52.setMaximumSize(QSize(41, 41))
-        self.l52.setFont(font1)
+        self.l52.setFont(font2)
         self.l52.setMaxLength(1)
         self.l52.setAlignment(Qt.AlignCenter)
 
@@ -683,7 +707,7 @@ class Ui_MainWindow(object):
         self.l53.setObjectName(u"l53")
         self.l53.setMinimumSize(QSize(41, 41))
         self.l53.setMaximumSize(QSize(41, 41))
-        self.l53.setFont(font1)
+        self.l53.setFont(font2)
         self.l53.setMaxLength(1)
         self.l53.setAlignment(Qt.AlignCenter)
 
@@ -693,7 +717,7 @@ class Ui_MainWindow(object):
         self.l54.setObjectName(u"l54")
         self.l54.setMinimumSize(QSize(41, 41))
         self.l54.setMaximumSize(QSize(41, 41))
-        self.l54.setFont(font1)
+        self.l54.setFont(font2)
         self.l54.setMaxLength(1)
         self.l54.setAlignment(Qt.AlignCenter)
 
@@ -728,7 +752,7 @@ class Ui_MainWindow(object):
         self.l55.setObjectName(u"l55")
         self.l55.setMinimumSize(QSize(41, 41))
         self.l55.setMaximumSize(QSize(41, 41))
-        self.l55.setFont(font1)
+        self.l55.setFont(font2)
         self.l55.setMaxLength(1)
         self.l55.setAlignment(Qt.AlignCenter)
 
@@ -738,7 +762,7 @@ class Ui_MainWindow(object):
         self.l56.setObjectName(u"l56")
         self.l56.setMinimumSize(QSize(41, 41))
         self.l56.setMaximumSize(QSize(41, 41))
-        self.l56.setFont(font1)
+        self.l56.setFont(font2)
         self.l56.setMaxLength(1)
         self.l56.setAlignment(Qt.AlignCenter)
 
@@ -748,7 +772,7 @@ class Ui_MainWindow(object):
         self.l57.setObjectName(u"l57")
         self.l57.setMinimumSize(QSize(41, 41))
         self.l57.setMaximumSize(QSize(41, 41))
-        self.l57.setFont(font1)
+        self.l57.setFont(font2)
         self.l57.setMaxLength(1)
         self.l57.setAlignment(Qt.AlignCenter)
 
@@ -758,7 +782,7 @@ class Ui_MainWindow(object):
         self.l64.setObjectName(u"l64")
         self.l64.setMinimumSize(QSize(41, 41))
         self.l64.setMaximumSize(QSize(41, 41))
-        self.l64.setFont(font1)
+        self.l64.setFont(font2)
         self.l64.setMaxLength(1)
         self.l64.setAlignment(Qt.AlignCenter)
 
@@ -768,7 +792,7 @@ class Ui_MainWindow(object):
         self.l65.setObjectName(u"l65")
         self.l65.setMinimumSize(QSize(41, 41))
         self.l65.setMaximumSize(QSize(41, 41))
-        self.l65.setFont(font1)
+        self.l65.setFont(font2)
         self.l65.setMaxLength(1)
         self.l65.setAlignment(Qt.AlignCenter)
 
@@ -778,7 +802,7 @@ class Ui_MainWindow(object):
         self.l66.setObjectName(u"l66")
         self.l66.setMinimumSize(QSize(41, 41))
         self.l66.setMaximumSize(QSize(41, 41))
-        self.l66.setFont(font1)
+        self.l66.setFont(font2)
         self.l66.setMaxLength(1)
         self.l66.setAlignment(Qt.AlignCenter)
 
@@ -788,7 +812,7 @@ class Ui_MainWindow(object):
         self.l73.setObjectName(u"l73")
         self.l73.setMinimumSize(QSize(41, 41))
         self.l73.setMaximumSize(QSize(41, 41))
-        self.l73.setFont(font1)
+        self.l73.setFont(font2)
         self.l73.setMaxLength(1)
         self.l73.setAlignment(Qt.AlignCenter)
 
@@ -798,7 +822,7 @@ class Ui_MainWindow(object):
         self.l74.setObjectName(u"l74")
         self.l74.setMinimumSize(QSize(41, 41))
         self.l74.setMaximumSize(QSize(41, 41))
-        self.l74.setFont(font1)
+        self.l74.setFont(font2)
         self.l74.setMaxLength(1)
         self.l74.setAlignment(Qt.AlignCenter)
 
@@ -808,7 +832,7 @@ class Ui_MainWindow(object):
         self.l75.setObjectName(u"l75")
         self.l75.setMinimumSize(QSize(41, 41))
         self.l75.setMaximumSize(QSize(41, 41))
-        self.l75.setFont(font1)
+        self.l75.setFont(font2)
         self.l75.setMaxLength(1)
         self.l75.setAlignment(Qt.AlignCenter)
 
@@ -831,7 +855,7 @@ class Ui_MainWindow(object):
         self.l58.setObjectName(u"l58")
         self.l58.setMinimumSize(QSize(41, 41))
         self.l58.setMaximumSize(QSize(41, 41))
-        self.l58.setFont(font1)
+        self.l58.setFont(font2)
         self.l58.setMaxLength(1)
         self.l58.setAlignment(Qt.AlignCenter)
 
@@ -841,7 +865,7 @@ class Ui_MainWindow(object):
         self.l59.setObjectName(u"l59")
         self.l59.setMinimumSize(QSize(41, 41))
         self.l59.setMaximumSize(QSize(41, 41))
-        self.l59.setFont(font1)
+        self.l59.setFont(font2)
         self.l59.setMaxLength(1)
         self.l59.setAlignment(Qt.AlignCenter)
 
@@ -851,7 +875,7 @@ class Ui_MainWindow(object):
         self.l60.setObjectName(u"l60")
         self.l60.setMinimumSize(QSize(41, 41))
         self.l60.setMaximumSize(QSize(41, 41))
-        self.l60.setFont(font1)
+        self.l60.setFont(font2)
         self.l60.setMaxLength(1)
         self.l60.setAlignment(Qt.AlignCenter)
 
@@ -861,7 +885,7 @@ class Ui_MainWindow(object):
         self.l67.setObjectName(u"l67")
         self.l67.setMinimumSize(QSize(41, 41))
         self.l67.setMaximumSize(QSize(41, 41))
-        self.l67.setFont(font1)
+        self.l67.setFont(font2)
         self.l67.setMaxLength(1)
         self.l67.setAlignment(Qt.AlignCenter)
 
@@ -871,7 +895,7 @@ class Ui_MainWindow(object):
         self.l68.setObjectName(u"l68")
         self.l68.setMinimumSize(QSize(41, 41))
         self.l68.setMaximumSize(QSize(41, 41))
-        self.l68.setFont(font1)
+        self.l68.setFont(font2)
         self.l68.setMaxLength(1)
         self.l68.setAlignment(Qt.AlignCenter)
 
@@ -881,7 +905,7 @@ class Ui_MainWindow(object):
         self.l69.setObjectName(u"l69")
         self.l69.setMinimumSize(QSize(41, 41))
         self.l69.setMaximumSize(QSize(41, 41))
-        self.l69.setFont(font1)
+        self.l69.setFont(font2)
         self.l69.setMaxLength(1)
         self.l69.setAlignment(Qt.AlignCenter)
 
@@ -891,7 +915,7 @@ class Ui_MainWindow(object):
         self.l76.setObjectName(u"l76")
         self.l76.setMinimumSize(QSize(41, 41))
         self.l76.setMaximumSize(QSize(41, 41))
-        self.l76.setFont(font1)
+        self.l76.setFont(font2)
         self.l76.setMaxLength(1)
         self.l76.setAlignment(Qt.AlignCenter)
 
@@ -901,7 +925,7 @@ class Ui_MainWindow(object):
         self.l77.setObjectName(u"l77")
         self.l77.setMinimumSize(QSize(41, 41))
         self.l77.setMaximumSize(QSize(41, 41))
-        self.l77.setFont(font1)
+        self.l77.setFont(font2)
         self.l77.setMaxLength(1)
         self.l77.setAlignment(Qt.AlignCenter)
 
@@ -911,7 +935,7 @@ class Ui_MainWindow(object):
         self.l78.setObjectName(u"l78")
         self.l78.setMinimumSize(QSize(41, 41))
         self.l78.setMaximumSize(QSize(41, 41))
-        self.l78.setFont(font1)
+        self.l78.setFont(font2)
         self.l78.setMaxLength(1)
         self.l78.setAlignment(Qt.AlignCenter)
 
@@ -934,7 +958,7 @@ class Ui_MainWindow(object):
         self.l61.setObjectName(u"l61")
         self.l61.setMinimumSize(QSize(41, 41))
         self.l61.setMaximumSize(QSize(41, 41))
-        self.l61.setFont(font1)
+        self.l61.setFont(font2)
         self.l61.setMaxLength(1)
         self.l61.setAlignment(Qt.AlignCenter)
 
@@ -944,7 +968,7 @@ class Ui_MainWindow(object):
         self.l62.setObjectName(u"l62")
         self.l62.setMinimumSize(QSize(41, 41))
         self.l62.setMaximumSize(QSize(41, 41))
-        self.l62.setFont(font1)
+        self.l62.setFont(font2)
         self.l62.setMaxLength(1)
         self.l62.setAlignment(Qt.AlignCenter)
 
@@ -954,7 +978,7 @@ class Ui_MainWindow(object):
         self.l63.setObjectName(u"l63")
         self.l63.setMinimumSize(QSize(41, 41))
         self.l63.setMaximumSize(QSize(41, 41))
-        self.l63.setFont(font1)
+        self.l63.setFont(font2)
         self.l63.setMaxLength(1)
         self.l63.setAlignment(Qt.AlignCenter)
 
@@ -964,7 +988,7 @@ class Ui_MainWindow(object):
         self.l70.setObjectName(u"l70")
         self.l70.setMinimumSize(QSize(41, 41))
         self.l70.setMaximumSize(QSize(41, 41))
-        self.l70.setFont(font1)
+        self.l70.setFont(font2)
         self.l70.setMaxLength(1)
         self.l70.setAlignment(Qt.AlignCenter)
 
@@ -974,7 +998,7 @@ class Ui_MainWindow(object):
         self.l71.setObjectName(u"l71")
         self.l71.setMinimumSize(QSize(41, 41))
         self.l71.setMaximumSize(QSize(41, 41))
-        self.l71.setFont(font1)
+        self.l71.setFont(font2)
         self.l71.setMaxLength(1)
         self.l71.setAlignment(Qt.AlignCenter)
 
@@ -984,7 +1008,7 @@ class Ui_MainWindow(object):
         self.l72.setObjectName(u"l72")
         self.l72.setMinimumSize(QSize(41, 41))
         self.l72.setMaximumSize(QSize(41, 41))
-        self.l72.setFont(font1)
+        self.l72.setFont(font2)
         self.l72.setMaxLength(1)
         self.l72.setAlignment(Qt.AlignCenter)
 
@@ -994,7 +1018,7 @@ class Ui_MainWindow(object):
         self.l79.setObjectName(u"l79")
         self.l79.setMinimumSize(QSize(41, 41))
         self.l79.setMaximumSize(QSize(41, 41))
-        self.l79.setFont(font1)
+        self.l79.setFont(font2)
         self.l79.setMaxLength(1)
         self.l79.setAlignment(Qt.AlignCenter)
 
@@ -1004,7 +1028,7 @@ class Ui_MainWindow(object):
         self.l80.setObjectName(u"l80")
         self.l80.setMinimumSize(QSize(41, 41))
         self.l80.setMaximumSize(QSize(41, 41))
-        self.l80.setFont(font1)
+        self.l80.setFont(font2)
         self.l80.setMaxLength(1)
         self.l80.setAlignment(Qt.AlignCenter)
 
@@ -1014,7 +1038,7 @@ class Ui_MainWindow(object):
         self.l81.setObjectName(u"l81")
         self.l81.setMinimumSize(QSize(41, 41))
         self.l81.setMaximumSize(QSize(41, 41))
-        self.l81.setFont(font1)
+        self.l81.setFont(font2)
         self.l81.setMaxLength(1)
         self.l81.setAlignment(Qt.AlignCenter)
 
@@ -1036,14 +1060,12 @@ class Ui_MainWindow(object):
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.frame_3)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.pushButton = QPushButton(self.frame_3)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMaximumSize(QSize(200, 16777215))
-        font2 = QFont()
-        font2.setPointSize(18)
-        self.pushButton.setFont(font2)
+        self.bt_solve = QPushButton(self.frame_3)
+        self.bt_solve.setObjectName(u"bt_solve")
+        self.bt_solve.setMaximumSize(QSize(200, 16777215))
+        self.bt_solve.setFont(font2)
 
-        self.horizontalLayout_2.addWidget(self.pushButton)
+        self.horizontalLayout_2.addWidget(self.bt_solve)
 
 
         self.verticalLayout.addWidget(self.frame_3)
@@ -1129,7 +1151,7 @@ class Ui_MainWindow(object):
         QWidget.setTabOrder(self.l78, self.l79)
         QWidget.setTabOrder(self.l79, self.l80)
         QWidget.setTabOrder(self.l80, self.l81)
-        QWidget.setTabOrder(self.l81, self.pushButton)
+        QWidget.setTabOrder(self.l81, self.bt_solve)
 
         self.retranslateUi(MainWindow)
 
@@ -1139,6 +1161,35 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"SUDOKU SOLVER", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Solve", None))
+        self.bt_clear.setText(QCoreApplication.translate("MainWindow", u"Clear", None))
+        self.l1.setText(QCoreApplication.translate("MainWindow", u"4", None))
+        self.l2.setText(QCoreApplication.translate("MainWindow", u"6", None))
+        self.l10.setText(QCoreApplication.translate("MainWindow", u"3", None))
+        self.l20.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.l21.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.l14.setText(QCoreApplication.translate("MainWindow", u"6", None))
+        self.l15.setText(QCoreApplication.translate("MainWindow", u"8", None))
+        self.l22.setText(QCoreApplication.translate("MainWindow", u"4", None))
+        self.l8.setText(QCoreApplication.translate("MainWindow", u"8", None))
+        self.l9.setText(QCoreApplication.translate("MainWindow", u"5", None))
+        self.l30.setText(QCoreApplication.translate("MainWindow", u"4", None))
+        self.l46.setText(QCoreApplication.translate("MainWindow", u"7", None))
+        self.l48.setText(QCoreApplication.translate("MainWindow", u"9", None))
+        self.l33.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.l34.setText(QCoreApplication.translate("MainWindow", u"9", None))
+        self.l43.setText(QCoreApplication.translate("MainWindow", u"7", None))
+        self.l53.setText(QCoreApplication.translate("MainWindow", u"3", None))
+        self.l56.setText(QCoreApplication.translate("MainWindow", u"7", None))
+        self.l64.setText(QCoreApplication.translate("MainWindow", u"6", None))
+        self.l59.setText(QCoreApplication.translate("MainWindow", u"3", None))
+        self.l67.setText(QCoreApplication.translate("MainWindow", u"7", None))
+        self.l68.setText(QCoreApplication.translate("MainWindow", u"9", None))
+        self.l69.setText(QCoreApplication.translate("MainWindow", u"4", None))
+        self.l77.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.l63.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.l79.setText(QCoreApplication.translate("MainWindow", u"6", None))
+        self.l80.setText(QCoreApplication.translate("MainWindow", u"7", None))
+        self.l81.setText(QCoreApplication.translate("MainWindow", u"3", None))
+        self.bt_solve.setText(QCoreApplication.translate("MainWindow", u"Solve", None))
     # retranslateUi
 

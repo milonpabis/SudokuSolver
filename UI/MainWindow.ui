@@ -50,7 +50,16 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QLabel" name="label">
          <property name="font">
@@ -66,6 +75,53 @@
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_16">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="leftMargin">
+           <number>250</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="bt_clear">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <italic>true</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Clear</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>
@@ -181,6 +237,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>4</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -208,6 +267,9 @@
                  <pointsize>18</pointsize>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="text">
+                <string>6</string>
                </property>
                <property name="maxLength">
                 <number>1</number>
@@ -264,6 +326,9 @@
                  <pointsize>18</pointsize>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="text">
+                <string>3</string>
                </property>
                <property name="maxLength">
                 <number>1</number>
@@ -377,6 +442,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>1</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -404,6 +472,9 @@
                  <pointsize>18</pointsize>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="text">
+                <string>2</string>
                </property>
                <property name="maxLength">
                 <number>1</number>
@@ -584,6 +655,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>6</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -612,6 +686,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>8</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -639,6 +716,9 @@
                  <pointsize>18</pointsize>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="text">
+                <string>4</string>
                </property>
                <property name="maxLength">
                 <number>1</number>
@@ -791,6 +871,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>8</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -818,6 +901,9 @@
                  <pointsize>18</pointsize>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="text">
+                <string>5</string>
                </property>
                <property name="maxLength">
                 <number>1</number>
@@ -1143,6 +1229,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>4</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -1255,6 +1344,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>7</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -1310,6 +1402,9 @@
                  <pointsize>18</pointsize>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="text">
+                <string>9</string>
                </property>
                <property name="maxLength">
                 <number>1</number>
@@ -1377,6 +1472,9 @@
                  <pointsize>18</pointsize>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="text">
+                <string>1</string>
                </property>
                <property name="maxLength">
                 <number>1</number>
@@ -1669,6 +1767,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>9</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -1752,6 +1853,9 @@
                  <pointsize>18</pointsize>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="text">
+                <string>7</string>
                </property>
                <property name="maxLength">
                 <number>1</number>
@@ -1864,6 +1968,9 @@
                  <pointsize>18</pointsize>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="text">
+                <string>3</string>
                </property>
                <property name="maxLength">
                 <number>1</number>
@@ -2021,6 +2128,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>7</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -2076,6 +2186,9 @@
                  <pointsize>18</pointsize>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="text">
+                <string>6</string>
                </property>
                <property name="maxLength">
                 <number>1</number>
@@ -2312,6 +2425,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>3</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -2368,6 +2484,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>7</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -2396,6 +2515,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>9</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -2423,6 +2545,9 @@
                  <pointsize>18</pointsize>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="text">
+                <string>4</string>
                </property>
                <property name="maxLength">
                 <number>1</number>
@@ -2479,6 +2604,9 @@
                  <pointsize>18</pointsize>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="text">
+                <string>1</string>
                </property>
                <property name="maxLength">
                 <number>1</number>
@@ -2631,6 +2759,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>2</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -2743,6 +2874,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>6</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -2771,6 +2905,9 @@
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="text">
+                <string>7</string>
+               </property>
                <property name="maxLength">
                 <number>1</number>
                </property>
@@ -2798,6 +2935,9 @@
                  <pointsize>18</pointsize>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="text">
+                <string>3</string>
                </property>
                <property name="maxLength">
                 <number>1</number>
@@ -2832,7 +2972,7 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="bt_solve">
          <property name="maximumSize">
           <size>
            <width>200</width>
@@ -2842,6 +2982,7 @@
          <property name="font">
           <font>
            <pointsize>18</pointsize>
+           <bold>true</bold>
           </font>
          </property>
          <property name="text">
@@ -2937,52 +3078,7 @@
   <tabstop>l79</tabstop>
   <tabstop>l80</tabstop>
   <tabstop>l81</tabstop>
-  <tabstop>pushButton</tabstop>
-  <tabstop>lineEdit_82</tabstop>
-  <tabstop>lineEdit_83</tabstop>
-  <tabstop>lineEdit_84</tabstop>
-  <tabstop>lineEdit_85</tabstop>
-  <tabstop>lineEdit_86</tabstop>
-  <tabstop>lineEdit_87</tabstop>
-  <tabstop>lineEdit_88</tabstop>
-  <tabstop>lineEdit_89</tabstop>
-  <tabstop>lineEdit_90</tabstop>
-  <tabstop>lineEdit_91</tabstop>
-  <tabstop>lineEdit_92</tabstop>
-  <tabstop>lineEdit_93</tabstop>
-  <tabstop>lineEdit_94</tabstop>
-  <tabstop>lineEdit_95</tabstop>
-  <tabstop>lineEdit_96</tabstop>
-  <tabstop>lineEdit_97</tabstop>
-  <tabstop>lineEdit_98</tabstop>
-  <tabstop>lineEdit_99</tabstop>
-  <tabstop>lineEdit_100</tabstop>
-  <tabstop>lineEdit_101</tabstop>
-  <tabstop>lineEdit_102</tabstop>
-  <tabstop>lineEdit_103</tabstop>
-  <tabstop>lineEdit_104</tabstop>
-  <tabstop>lineEdit_105</tabstop>
-  <tabstop>lineEdit_106</tabstop>
-  <tabstop>lineEdit_107</tabstop>
-  <tabstop>lineEdit_108</tabstop>
-  <tabstop>lineEdit_109</tabstop>
-  <tabstop>lineEdit_110</tabstop>
-  <tabstop>lineEdit_111</tabstop>
-  <tabstop>lineEdit_112</tabstop>
-  <tabstop>lineEdit_113</tabstop>
-  <tabstop>lineEdit_114</tabstop>
-  <tabstop>lineEdit_115</tabstop>
-  <tabstop>lineEdit_116</tabstop>
-  <tabstop>lineEdit_117</tabstop>
-  <tabstop>lineEdit_118</tabstop>
-  <tabstop>lineEdit_119</tabstop>
-  <tabstop>lineEdit_120</tabstop>
-  <tabstop>lineEdit_121</tabstop>
-  <tabstop>lineEdit_122</tabstop>
-  <tabstop>lineEdit_123</tabstop>
-  <tabstop>lineEdit_124</tabstop>
-  <tabstop>lineEdit_125</tabstop>
-  <tabstop>lineEdit_126</tabstop>
+  <tabstop>bt_solve</tabstop>
  </tabstops>
  <resources/>
  <connections/>
