@@ -3,15 +3,9 @@ App with simple UI, solving Sudoku problem using backtracking algorythm
 
 ## Images
 
-![SUDOKU_1](https://github.com/milonpabis/SudokuSolver/assets/116438884/a0694310-f15b-43db-a08c-2543d7639559)
+![sudoku1](https://github.com/milonpabis/SudokuSolver/assets/116438884/8ab5761f-12af-4837-9200-4892642f8d8a)
 
 
-![SUDOKU_2](https://github.com/milonpabis/SudokuSolver/assets/116438884/7e1f3a73-b2ea-4733-b62c-1f497b8510e1)
+![sudoku2](https://github.com/milonpabis/SudokuSolver/assets/116438884/86e19885-82e0-4831-8d33-902ab7e9dbf2)
 
-
-![SUDOKU_3](https://github.com/milonpabis/SudokuSolver/assets/116438884/f7b0990e-0187-4634-83cb-ea46bc35b993)
-
-
-
-GUI was made just to be functional, no styles added.
 
